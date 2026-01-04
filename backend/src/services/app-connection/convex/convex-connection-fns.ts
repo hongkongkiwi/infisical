@@ -56,11 +56,10 @@ export const validateConvexConnectionCredentials = async ({ credentials }: TConv
     });
   } catch (error: unknown) {
     if (error instanceof AxiosError) {
+      const responseData = error.response?.data;
+      const details = responseData ? JSON.stringify(responseData) : error.message || "Unknown error";
       throw new BadRequestError({
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-        message: `Failed to validate credentials: ${
-          error.response?.data ? JSON.stringify(error.response?.data) : error.message || "Unknown error"
-        }`
+        message: `Failed to validate credentials: ${details}`
       });
     }
 
