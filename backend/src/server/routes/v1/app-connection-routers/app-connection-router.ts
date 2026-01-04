@@ -53,6 +53,7 @@ import {
   CloudflareConnectionListItemSchema,
   SanitizedCloudflareConnectionSchema
 } from "@app/services/app-connection/cloudflare/cloudflare-connection-schema";
+import { ConvexConnectionListItemSchema, SanitizedConvexConnectionSchema } from "@app/services/app-connection/convex";
 import {
   DatabricksConnectionListItemSchema,
   SanitizedDatabricksConnectionSchema
@@ -131,6 +132,10 @@ import {
   SanitizedTerraformCloudConnectionSchema,
   TerraformCloudConnectionListItemSchema
 } from "@app/services/app-connection/terraform-cloud";
+import {
+  SanitizedTriggerDevConnectionSchema,
+  TriggerDevConnectionListItemSchema
+} from "@app/services/app-connection/trigger-dev";
 import { SanitizedVercelConnectionSchema, VercelConnectionListItemSchema } from "@app/services/app-connection/vercel";
 import {
   SanitizedWindmillConnectionSchema,
@@ -151,6 +156,7 @@ const SanitizedAppConnectionSchema = z.union([
   ...SanitizedDatabricksConnectionSchema.options,
   ...SanitizedHumanitecConnectionSchema.options,
   ...SanitizedTerraformCloudConnectionSchema.options,
+  ...SanitizedTriggerDevConnectionSchema.options,
   ...SanitizedVercelConnectionSchema.options,
   ...SanitizedPostgresConnectionSchema.options,
   ...SanitizedMsSqlConnectionSchema.options,
@@ -170,6 +176,7 @@ const SanitizedAppConnectionSchema = z.union([
   ...SanitizedFlyioConnectionSchema.options,
   ...SanitizedGitLabConnectionSchema.options,
   ...SanitizedCloudflareConnectionSchema.options,
+  ...SanitizedConvexConnectionSchema.options,
   ...SanitizedBitbucketConnectionSchema.options,
   ...SanitizedZabbixConnectionSchema.options,
   ...SanitizedRailwayConnectionSchema.options,
@@ -199,6 +206,7 @@ const AppConnectionOptionsSchema = z.discriminatedUnion("app", [
   DatabricksConnectionListItemSchema,
   HumanitecConnectionListItemSchema,
   TerraformCloudConnectionListItemSchema,
+  TriggerDevConnectionListItemSchema,
   VercelConnectionListItemSchema,
   PostgresConnectionListItemSchema,
   MsSqlConnectionListItemSchema,
@@ -218,6 +226,7 @@ const AppConnectionOptionsSchema = z.discriminatedUnion("app", [
   FlyioConnectionListItemSchema,
   GitLabConnectionListItemSchema,
   CloudflareConnectionListItemSchema,
+  ConvexConnectionListItemSchema,
   BitbucketConnectionListItemSchema,
   ZabbixConnectionListItemSchema,
   RailwayConnectionListItemSchema,

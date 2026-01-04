@@ -33,6 +33,7 @@ import {
   CloudflareWorkersSyncListItemSchema,
   CloudflareWorkersSyncSchema
 } from "@app/services/secret-sync/cloudflare-workers/cloudflare-workers-schemas";
+import { ConvexSyncListItemSchema, ConvexSyncSchema } from "@app/services/secret-sync/convex";
 import { DatabricksSyncListItemSchema, DatabricksSyncSchema } from "@app/services/secret-sync/databricks";
 import {
   DigitalOceanAppPlatformSyncListItemSchema,
@@ -54,6 +55,7 @@ import { RenderSyncListItemSchema, RenderSyncSchema } from "@app/services/secret
 import { SupabaseSyncListItemSchema, SupabaseSyncSchema } from "@app/services/secret-sync/supabase";
 import { TeamCitySyncListItemSchema, TeamCitySyncSchema } from "@app/services/secret-sync/teamcity";
 import { TerraformCloudSyncListItemSchema, TerraformCloudSyncSchema } from "@app/services/secret-sync/terraform-cloud";
+import { TriggerDevSyncListItemSchema, TriggerDevSyncSchema } from "@app/services/secret-sync/trigger-dev";
 import { VercelSyncListItemSchema, VercelSyncSchema } from "@app/services/secret-sync/vercel";
 import { WindmillSyncListItemSchema, WindmillSyncSchema } from "@app/services/secret-sync/windmill";
 import { ZabbixSyncListItemSchema, ZabbixSyncSchema } from "@app/services/secret-sync/zabbix";
@@ -69,6 +71,7 @@ const SecretSyncSchema = z.discriminatedUnion("destination", [
   DatabricksSyncSchema,
   HumanitecSyncSchema,
   TerraformCloudSyncSchema,
+  TriggerDevSyncSchema,
   CamundaSyncSchema,
   VercelSyncSchema,
   WindmillSyncSchema,
@@ -82,6 +85,7 @@ const SecretSyncSchema = z.discriminatedUnion("destination", [
   GitLabSyncSchema,
   CloudflarePagesSyncSchema,
   CloudflareWorkersSyncSchema,
+  ConvexSyncSchema,
   SupabaseSyncSchema,
   ZabbixSyncSchema,
   RailwaySyncSchema,
@@ -106,6 +110,7 @@ const SecretSyncOptionsSchema = z.discriminatedUnion("destination", [
   DatabricksSyncListItemSchema,
   HumanitecSyncListItemSchema,
   TerraformCloudSyncListItemSchema,
+  TriggerDevSyncListItemSchema,
   CamundaSyncListItemSchema,
   VercelSyncListItemSchema,
   WindmillSyncListItemSchema,
@@ -119,6 +124,7 @@ const SecretSyncOptionsSchema = z.discriminatedUnion("destination", [
   GitLabSyncListItemSchema,
   CloudflarePagesSyncListItemSchema,
   CloudflareWorkersSyncListItemSchema,
+  ConvexSyncListItemSchema,
   DigitalOceanAppPlatformSyncListItemSchema,
   ZabbixSyncListItemSchema,
   RailwaySyncListItemSchema,
