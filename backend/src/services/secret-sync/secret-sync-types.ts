@@ -109,6 +109,12 @@ import {
   TConvexSyncWithCredentials
 } from "./convex";
 import {
+  TTriggerDevSync,
+  TTriggerDevSyncInput,
+  TTriggerDevSyncListItem,
+  TTriggerDevSyncWithCredentials
+} from "./trigger-dev";
+import {
   TDigitalOceanAppPlatformSyncInput,
   TDigitalOceanAppPlatformSyncListItem,
   TDigitalOceanAppPlatformSyncWithCredentials
@@ -212,6 +218,7 @@ export type TSecretSync =
   | TChecklySync
   | TSupabaseSync
   | TConvexSync
+  | TTriggerDevSync
   | TNetlifySync
   | TNorthflankSync
   | TBitbucketSync
@@ -247,6 +254,7 @@ export type TSecretSyncWithCredentials =
   | TChecklySyncWithCredentials
   | TSupabaseSyncWithCredentials
   | TConvexSyncWithCredentials
+  | TTriggerDevSyncWithCredentials
   | TDigitalOceanAppPlatformSyncWithCredentials
   | TNetlifySyncWithCredentials
   | TNorthflankSyncWithCredentials
@@ -284,6 +292,7 @@ export type TSecretSyncInput =
   | TChecklySyncInput
   | TSupabaseSyncInput
   | TConvexSyncInput
+  | TTriggerDevSyncInput
   | TDigitalOceanAppPlatformSyncInput
   | TNetlifySyncInput
   | TNorthflankSyncInput
@@ -322,6 +331,7 @@ export type TSecretSyncListItem =
   | TChecklySyncListItem
   | TSupabaseSyncListItem
   | TConvexSyncListItem
+  | TTriggerDevSyncListItem
   | TDigitalOceanAppPlatformSyncListItem
   | TNetlifySyncListItem
   | TNorthflankSyncListItem

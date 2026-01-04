@@ -106,6 +106,10 @@ export const SECRET_SYNC_MAP: Record<SecretSync, { name: string; image: string }
     name: "Convex",
     image: "Convex.png"
   },
+  [SecretSync.TriggerDev]: {
+    name: "Trigger.dev",
+    image: "Trigger.dev.png"
+  },
   [SecretSync.DigitalOceanAppPlatform]: {
     name: "Digital Ocean App Platform",
     image: "Digital Ocean.png"
@@ -162,6 +166,7 @@ export const SECRET_SYNC_CONNECTION_MAP: Record<SecretSync, AppConnection> = {
   [SecretSync.CloudflareWorkers]: AppConnection.Cloudflare,
   [SecretSync.Supabase]: AppConnection.Supabase,
   [SecretSync.Convex]: AppConnection.Convex,
+  [SecretSync.TriggerDev]: AppConnection.TriggerDev,
   [SecretSync.Zabbix]: AppConnection.Zabbix,
   [SecretSync.Railway]: AppConnection.Railway,
   [SecretSync.Checkly]: AppConnection.Checkly,

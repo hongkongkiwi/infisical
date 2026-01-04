@@ -52,6 +52,7 @@ import { RenderConnectionForm } from "./RenderConnectionForm";
 import { SupabaseConnectionForm } from "./SupabaseConnectionForm";
 import { TeamCityConnectionForm } from "./TeamCityConnectionForm";
 import { TerraformCloudConnectionForm } from "./TerraformCloudConnectionForm";
+import { TriggerDevConnectionForm } from "./TriggerDevConnectionForm";
 import { VercelConnectionForm } from "./VercelConnectionForm";
 import { WindmillConnectionForm } from "./WindmillConnectionForm";
 import { ZabbixConnectionForm } from "./ZabbixConnectionForm";
@@ -164,6 +165,8 @@ const CreateForm = ({ app, onComplete, projectId }: CreateFormProps) => {
       return <ChecklyConnectionForm onSubmit={onSubmit} />;
     case AppConnection.Convex:
       return <ConvexConnectionForm onSubmit={onSubmit} />;
+    case AppConnection.TriggerDev:
+      return <TriggerDevConnectionForm onSubmit={onSubmit} />;
     case AppConnection.Chef:
       return <ChefConnectionForm onSubmit={onSubmit} />;
     case AppConnection.Supabase:
@@ -330,6 +333,8 @@ const UpdateForm = ({ appConnection, onComplete }: UpdateFormProps) => {
       return <ChecklyConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
     case AppConnection.Convex:
       return <ConvexConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
+    case AppConnection.TriggerDev:
+      return <TriggerDevConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
     case AppConnection.Chef:
       return <ChefConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
     case AppConnection.Supabase:

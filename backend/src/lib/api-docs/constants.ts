@@ -2526,6 +2526,10 @@ export const AppConnections = {
     CONVEX: {
       adminKey: "The admin key used to authenticate with Convex."
     },
+    TRIGGER_DEV: {
+      apiToken: "The API token used to authenticate with Trigger.dev.",
+      apiUrl: "The Trigger.dev API base URL for self-hosted instances."
+    },
     DIGITAL_OCEAN_APP_PLATFORM: {
       apiToken: "The API token used to authenticate with Digital Ocean App Platform."
     },
@@ -2800,6 +2804,10 @@ export const SecretSyncs = {
     },
     CONVEX: {
       deploymentUrl: "The URL of the Convex deployment to sync secrets to."
+    },
+    TRIGGER_DEV: {
+      projectRef: "The Trigger.dev project reference to sync secrets to.",
+      environment: "The Trigger.dev environment to sync secrets to."
     },
     BITBUCKET: {
       workspaceSlug: "The Bitbucket Workspace slug to sync secrets to.",

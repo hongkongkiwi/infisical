@@ -172,6 +172,10 @@ export type TConvexConnectionOption = TAppConnectionOptionBase & {
   app: AppConnection.Convex;
 };
 
+export type TTriggerDevConnectionOption = TAppConnectionOptionBase & {
+  app: AppConnection.TriggerDev;
+};
+
 export type TOktaConnectionOption = TAppConnectionOptionBase & {
   app: AppConnection.Okta;
 };
@@ -238,6 +242,7 @@ export type TAppConnectionOption =
   | TDigitalOceanConnectionOption
   | TNetlifyConnectionOption
   | TConvexConnectionOption
+  | TTriggerDevConnectionOption
   | TNorthflankConnectionOption
   | TOktaConnectionOption
   | TAzureAdCsConnectionOption
@@ -286,6 +291,8 @@ export type TAppConnectionOptionMap = {
   [AppConnection.Supabase]: TSupabaseConnectionOption;
   [AppConnection.DigitalOcean]: TDigitalOceanConnectionOption;
   [AppConnection.Netlify]: TNetlifyConnectionOption;
+  [AppConnection.Convex]: TConvexConnectionOption;
+  [AppConnection.TriggerDev]: TTriggerDevConnectionOption;
   [AppConnection.Northflank]: TNorthflankConnectionOption;
   [AppConnection.Okta]: TOktaConnectionOption;
   [AppConnection.AzureADCS]: TAzureAdCsConnectionOption;

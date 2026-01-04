@@ -35,6 +35,7 @@ import { RenderSyncFields } from "./RenderSyncFields";
 import { SupabaseSyncFields } from "./SupabaseSyncFields";
 import { TeamCitySyncFields } from "./TeamCitySyncFields";
 import { TerraformCloudSyncFields } from "./TerraformCloudSyncFields";
+import { TriggerDevSyncFields } from "./TriggerDevSyncFields";
 import { VercelSyncFields } from "./VercelSyncFields";
 import { WindmillSyncFields } from "./WindmillSyncFields";
 import { ZabbixSyncFields } from "./ZabbixSyncFields";
@@ -101,6 +102,8 @@ export const SecretSyncDestinationFields = () => {
       return <SupabaseSyncFields />;
     case SecretSync.Convex:
       return <ConvexSyncFields />;
+    case SecretSync.TriggerDev:
+      return <TriggerDevSyncFields />;
     case SecretSync.DigitalOceanAppPlatform:
       return <DigitalOceanAppPlatformSyncFields />;
     case SecretSync.Netlify:

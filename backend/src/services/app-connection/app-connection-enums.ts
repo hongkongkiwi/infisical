@@ -44,7 +44,8 @@ export enum AppConnection {
   Chef = "chef",
   Northflank = "northflank",
   OctopusDeploy = "octopus-deploy",
-  Convex = "convex"
+  Convex = "convex",
+  TriggerDev = "trigger-dev"
 }
 
 export enum AWSRegion {

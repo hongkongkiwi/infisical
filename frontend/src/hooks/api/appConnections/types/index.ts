@@ -43,6 +43,7 @@ import { TRenderConnection } from "./render-connection";
 import { TSupabaseConnection } from "./supabase-connection";
 import { TTeamCityConnection } from "./teamcity-connection";
 import { TTerraformCloudConnection } from "./terraform-cloud-connection";
+import { TTriggerDevConnection } from "./trigger-dev-connection";
 import { TVercelConnection } from "./vercel-connection";
 import { TWindmillConnection } from "./windmill-connection";
 import { TZabbixConnection } from "./zabbix-connection";
@@ -89,6 +90,7 @@ export * from "./render-connection";
 export * from "./supabase-connection";
 export * from "./teamcity-connection";
 export * from "./terraform-cloud-connection";
+export * from "./trigger-dev-connection";
 export * from "./vercel-connection";
 export * from "./windmill-connection";
 export * from "./zabbix-connection";
@@ -139,7 +141,8 @@ export type TAppConnection =
   | TRedisConnection
   | TMongoDBConnection
   | TChefConnection
-  | TDNSMadeEasyConnection;
+  | TDNSMadeEasyConnection
+  | TTriggerDevConnection;
 
 export type TAvailableAppConnection = Pick<TAppConnection, "name" | "id" | "projectId">;
 

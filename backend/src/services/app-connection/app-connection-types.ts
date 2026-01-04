@@ -252,6 +252,12 @@ import {
   TValidateTerraformCloudConnectionCredentialsSchema
 } from "./terraform-cloud";
 import {
+  TTriggerDevConnection,
+  TTriggerDevConnectionConfig,
+  TTriggerDevConnectionInput,
+  TValidateTriggerDevConnectionCredentialsSchema
+} from "./trigger-dev";
+import {
   TValidateVercelConnectionCredentialsSchema,
   TVercelConnection,
   TVercelConnectionConfig,
@@ -317,6 +323,7 @@ export type TAppConnection = { id: string } & (
   | TMongoDBConnection
   | TChefConnection
   | TOctopusDeployConnection
+  | TTriggerDevConnection
 );
 
 export type TAppConnectionRaw = NonNullable<Awaited<ReturnType<TAppConnectionDALFactory["findById"]>>>;
@@ -370,6 +377,7 @@ export type TAppConnectionInput = { id: string } & (
   | TMongoDBConnectionInput
   | TChefConnectionInput
   | TOctopusDeployConnectionInput
+  | TTriggerDevConnectionInput
 );
 
 export type TSqlConnectionInput =
@@ -440,7 +448,8 @@ export type TAppConnectionConfig =
   | TRedisConnectionConfig
   | TMongoDBConnectionConfig
   | TChefConnectionConfig
-  | TOctopusDeployConnectionConfig;
+  | TOctopusDeployConnectionConfig
+  | TTriggerDevConnectionConfig;
 
 export type TValidateAppConnectionCredentialsSchema =
   | TValidateAwsConnectionCredentialsSchema
@@ -488,7 +497,8 @@ export type TValidateAppConnectionCredentialsSchema =
   | TValidateRedisConnectionCredentialsSchema
   | TValidateMongoDBConnectionCredentialsSchema
   | TValidateChefConnectionCredentialsSchema
-  | TValidateOctopusDeployConnectionCredentialsSchema;
+  | TValidateOctopusDeployConnectionCredentialsSchema
+  | TValidateTriggerDevConnectionCredentialsSchema;
 
 export type TListAwsConnectionKmsKeys = {
   connectionId: string;

@@ -44,5 +44,6 @@ export enum AppConnection {
   LaravelForge = "laravel-forge",
   Chef = "chef",
   OctopusDeploy = "octopus-deploy",
-  Convex = "convex"
+  Convex = "convex",
+  TriggerDev = "trigger-dev"
 }
