@@ -102,18 +102,8 @@ import {
   TCloudflareWorkersSyncListItem,
   TCloudflareWorkersSyncWithCredentials
 } from "./cloudflare-workers";
-import {
-  TConvexSync,
-  TConvexSyncInput,
-  TConvexSyncListItem,
-  TConvexSyncWithCredentials
-} from "./convex";
-import {
-  TTriggerDevSync,
-  TTriggerDevSyncInput,
-  TTriggerDevSyncListItem,
-  TTriggerDevSyncWithCredentials
-} from "./trigger-dev";
+import { TConvexSync, TConvexSyncInput, TConvexSyncListItem, TConvexSyncWithCredentials } from "./convex";
+import { TTriggerDevSync, TTriggerDevSyncInput, TTriggerDevSyncListItem, TTriggerDevSyncWithCredentials } from "./trigger-dev";
 import {
   TDigitalOceanAppPlatformSyncInput,
   TDigitalOceanAppPlatformSyncListItem,

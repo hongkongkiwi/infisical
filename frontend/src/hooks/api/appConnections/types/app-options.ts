@@ -175,7 +175,6 @@ export type TConvexConnectionOption = TAppConnectionOptionBase & {
 export type TTriggerDevConnectionOption = TAppConnectionOptionBase & {
   app: AppConnection.TriggerDev;
 };
-
 export type TOktaConnectionOption = TAppConnectionOptionBase & {
   app: AppConnection.Okta;
 };
